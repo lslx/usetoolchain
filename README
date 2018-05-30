@@ -1,0 +1,80 @@
+gcc hic.c
+
+gcc -o hic hic.c
+
+gcc -E hic.c>hic.i
+
+gcc hic.i
+
+gcc -S hic.i
+
+gcc hic.s
+
+gcc -c hic.s
+
+gcc hic.o
+
+
+rm a.out hic hic.{a,i,o,s}
+
+gcc -c hic2.c && gcc hic2.o hic.c
+
+rm a.out hic2.o
+
+gcc -c *o
+ar rcs -o libhic.a *o
+
+rm *o
+
+gcc hic.o libhic.a
+
+rm *o a.out
+
+
+gcc -static *c
+
+gcc -shared *c
+
+-fPIC
+-fpic
+-fPIE
+-fpie
+
+
+----- detail
+/usr/lib/gcc/x86_64-linux-gnu/5/cc1 (include cpp function)
+as
+/usr/lib/gcc/x86_64-linux-gnu/5/collect2
+
+
+control:
+-DMYDEF=mydef
+-UMYDEF
+-I
+-L
+-l
+
+
+readelf, nm, ldd, objcopy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
